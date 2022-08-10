@@ -51,9 +51,10 @@ body {
     flex-direction: column;
     height: 130px;
     text-decoration-color: black;
+}
 
-
-    
+.buy-price {
+    background-color: red;
 }
 
 .confirmation {
@@ -127,18 +128,12 @@ body {
     border: 1px lightgrey solid;
     cursor: pointer;
     background-color: white;
-    border-radius: 5px;
-    
-   
-}
-
-.buy-option {
-
+    border-radius: 10px;
 }
 
 .option:hover {
-    border: 2px white solid;
-    border-radius: 5px;
+    border: 2px rgb(14, 14, 14) solid;
+    border-radius: 10px;
 }
 
 .option:active {

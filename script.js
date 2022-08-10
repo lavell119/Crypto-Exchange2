@@ -48,7 +48,10 @@ priceOption.forEach(option=>option.addEventListener('click', ()=> {priceOptions.
 
 buyOptions.forEach(option=>option.addEventListener('click', ()=> {buySelector.classList.add('hidden')
 priceOptions.classList.add('show')
-subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'}))
+
+let currency=option.textContent
+console.log(currency)
+subTitle.innerText=`HOW MUCH ${currency.trim()} WOULD YOU LIKE TO BUY?`}))
 
 /*fetch('https://blockchain.info/tobtc?currency=USD&value=500')
 .then(res=>res.json())
