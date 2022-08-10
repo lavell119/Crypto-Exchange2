@@ -15,6 +15,7 @@ let response=document.querySelector('.response')
 const ticker=document.querySelectorAll('.ticker')
 const homeButton=document.querySelector('.home-button')
 const dataPurchase=document.querySelector('data-purchase')
+const buyOptions=document.querySelectorAll('.buy-option')
 
 console.log(priceOption)
 homeButton.addEventListener('click', () => location.reload())
@@ -29,12 +30,10 @@ subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'
 
 priceOption.forEach(priceOption=>{
   let price=priceOption.innerText
-  console.log(price)
   let tickerTextString=price.toString()
   let cutTickerText=tickerTextString.replace(/\$/g, '')
-  console.log(cutTickerText)
   priceNumber=Number(cutTickerText)
-  priceOption.firstElementChild.innerText=`You will recieve ${priceNumber* .75} worth of btc`
+  priceOption.firstElementChild.innerText=`You will recieve ${'$'}${priceNumber* .75} worth of BTC`
 }
  
 )
@@ -49,6 +48,11 @@ priceOption.forEach(option=>option.addEventListener('click', ()=> {priceOptions.
     dollarAmount.innerText=inText
     subTitle.innerText='CONFIRMATION'
 }))
+
+
+buyOptions.forEach(option=>option.addEventListener('click', ()=> {buySelector.classList.add('hidden')
+priceOptions.classList.add('show')
+subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'}))
 
 /*fetch('https://blockchain.info/tobtc?currency=USD&value=500')
 .then(res=>res.json())
