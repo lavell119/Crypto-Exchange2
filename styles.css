@@ -126,6 +126,8 @@ body {
     align-items: center;
     border: 1px lightgrey solid;
     cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
     
    
 }

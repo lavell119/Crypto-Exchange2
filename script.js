@@ -38,10 +38,6 @@ priceOption.forEach(priceOption=>{
  
 )
 
-ethOption.addEventListener('click', ()=> {buySelector.classList.add('hidden')
-priceOptions.classList.add('show')
-subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'})
-
 priceOption.forEach(option=>option.addEventListener('click', ()=> {priceOptions.classList.remove('show')
     confirmation.classList.add('show')
     let inText=option.innerText
