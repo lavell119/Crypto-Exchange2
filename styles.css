@@ -96,10 +96,23 @@ body {
     gap: 1px;
 }
 
+.ticker {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    padding-top: 30px;
+    font-size: 17px;
+}
+
 .buy-options {
-    width: 400px;
+    width: 330px;
+    height: 330px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .option {
@@ -165,7 +178,11 @@ body {
 .price-options.show {
     display: grid;  
     grid-template-columns: 1fr 1fr;
+    height: 320px;
+
     gap: 1px;
+    background: yellow;
+
 }
 
 

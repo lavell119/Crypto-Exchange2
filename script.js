@@ -27,7 +27,17 @@ subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'
 
 //ticker.forEach((ticker, priceOption)=>ticker.innerText=priceOption.dataset.purchase)
 
-priceOption.forEach(priceOption=>priceOption.firstElementChild.innerText='')
+priceOption.forEach(priceOption=>{
+  let price=priceOption.innerText
+  console.log(price)
+  let tickerTextString=price.toString()
+  let cutTickerText=tickerTextString.replace(/\$/g, '')
+  console.log(cutTickerText)
+  priceNumber=Number(cutTickerText)
+  priceOption.firstElementChild.innerText=`You will recieve ${priceNumber* .75} worth of btc`
+}
+ 
+)
 
 ethOption.addEventListener('click', ()=> {buySelector.classList.add('hidden')
 priceOptions.classList.add('show')
