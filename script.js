@@ -45,7 +45,7 @@ priceOption.forEach(priceOption=>{
   let tickerTextString=price.toString()
   let cutTickerText=tickerTextString.replace(/\$/g, '')
   priceNumber=Number(cutTickerText)
-  priceOption.firstElementChild.innerText=`You will recieve ${'$'}${priceNumber * .75} worth of ${currency}`
+  priceOption.firstElementChild.innerText=`You will recieve ${'$'}${priceNumber * .65} worth of ${currency.trim()}`
 } 
 )
 }
