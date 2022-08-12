@@ -27,16 +27,31 @@ subTitle.innerText='HOW MUCH WOULD YOU LIKE TO BUY?'
 })
 
 //ticker.forEach((ticker, priceOption)=>ticker.innerText=priceOption.dataset.purchase)
+let currency=''
+let currencyValue=''
 
+buyOptions.forEach(option=>option.addEventListener('click', ()=> {buySelector.classList.add('hidden')
+priceOptions.classList.add('show')
+let currency=option.textContent
+console.log(currency)
+subTitle.innerText=`HOW MUCH ${currency.trim()} WOULD YOU LIKE TO BUY?`
+setPriceOptions(priceOption, currency)
+}
+))
+
+let setPriceOptions=(priceOption, currency)=>{
 priceOption.forEach(priceOption=>{
   let price=priceOption.innerText
   let tickerTextString=price.toString()
   let cutTickerText=tickerTextString.replace(/\$/g, '')
   priceNumber=Number(cutTickerText)
-  priceOption.firstElementChild.innerText=`You will recieve ${'$'}${priceNumber* .75} worth of BTC`
-}
- 
+  priceOption.firstElementChild.innerText=`You will recieve ${'$'}${priceNumber * .75} worth of ${currency}`
+} 
 )
+}
+
+
+
 
 priceOption.forEach(option=>option.addEventListener('click', ()=> {priceOptions.classList.remove('show')
     confirmation.classList.add('show')
@@ -46,12 +61,6 @@ priceOption.forEach(option=>option.addEventListener('click', ()=> {priceOptions.
 }))
 
 
-buyOptions.forEach(option=>option.addEventListener('click', ()=> {buySelector.classList.add('hidden')
-priceOptions.classList.add('show')
-
-let currency=option.textContent
-console.log(currency)
-subTitle.innerText=`HOW MUCH ${currency.trim()} WOULD YOU LIKE TO BUY?`}))
 
 /*fetch('https://blockchain.info/tobtc?currency=USD&value=500')
 .then(res=>res.json())
