@@ -78,6 +78,17 @@ body {
    
 }
 
+.confirmation-button {
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid grey;
+    padding: 15px 0 15px 0;
+}
+
+.confirmation-button:hover {
+    border: 2px solid black;
+}
+
 .sub-title {
     text-align: center;
     height: 50px;
