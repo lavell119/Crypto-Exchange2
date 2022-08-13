@@ -78,15 +78,17 @@ body {
    
 }
 
-.confirmation-button {
+.button {   
     font-weight: bold;
     background-color: white;
     border: 2px solid grey;
     padding: 15px 0 15px 0;
+    border-radius: 10px;
 }
 
-.confirmation-button:hover {
+.button:hover {
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .sub-title {
@@ -220,7 +222,21 @@ button {
 }
 
 .payment-message-btn {
-    margin: auto;
+
     font-weight: bold;
 }
 
+.green {
+    color: green;
+}
+
+.payment-message-content {
+    width: 500px;
+    margin: auto;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
