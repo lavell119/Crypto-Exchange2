@@ -64,13 +64,11 @@ body {
     width: 100%;
     font-size: 19px;
     display: none;
-
 }
 
 .confirmation.show {
     display: flex;
     text-align: center;
-    height: 100px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -103,7 +101,6 @@ body {
     font-weight: bold;
     margin-bottom: 50px;
     font-size: 21px;
-
 }
 
 .main-grid {
@@ -245,4 +242,9 @@ button {
     align-items: center;
     justify-content: space-between;
 
+}
+
+.confirmation-content {
+    height: 160px;
+    width: 330px;
 }
